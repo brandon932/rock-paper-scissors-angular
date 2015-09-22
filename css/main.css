@@ -1,1 +1,14 @@
 /* add custom styles */
+
+.title, .reset{
+  text-align: center;
+}
+img {
+  /*max-width: 300px;*/
+  max-height: 300px;
+}
+
+.row{
+  margin: 20px;
+  /*text-align: center;*/
+}

@@ -1,55 +1,73 @@
 <!DOCTYPE html>
 <html lang="en" ng-app='myApp'>
-  <head>
-    <meta charset="utf-8">
-    <title>Untitled</title>
-    
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-  </head>
-  <body>
-    <!-- sample angular code -->
-    <div class="container">
+<head>
+  <meta charset="utf-8">
+  <title>Untitled</title>
+
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="title">
+          <h1>Rock Paper Scissors</h1>
+
+        </div>
+      </div>
+
+    </div>
+    <div class="row">
+
       <div ng-controller="myController">
 
-          <div ng-model="choice">
-           <!--  <button value="" selected disabled="">Please Select</button> -->
-            <button type="button" ng-click="howToWin('rock')">Rock</button>
-            <button type="button" ng-click="howToWin('paper')">Paper</button>
-            <button type="button" ng-click="howToWin('scissors')">Scissors</button>
-          </div>
-          
-          <button type="button" class="btn btn-primary" ng-click="reset()">Reset</button>
-
-        <div>
-          <div>
-            <p>The computer chose: {{computerChoice}}</p>
-          </div>
-          <div>
-            <p>You chose: {{choice}}</p>
-          </div>
-          <div>
-            <p>{{message}}</p>
-          </div>
+        <div ng-model="choice">
+          <button type="button" ng-click="howToWin('rock')"><img src="http://img2.wikia.nocookie.net/__cb20141120133208/epicrapbattlesofhistory/images/4/4b/A_Rock!.gif" alt="" /></button>
+          <button type="button" ng-click="howToWin('paper')"><img src="http://www.designboom.com/wp-content/uploads/2013/05/paper-LED-torch-light-designboom03.jpg" alt="" /></button>
+          <button type="button" ng-click="howToWin('scissors')"><img src="http://ak1.ostkcdn.com/images/products/5637289/5637289/Gingher-5-Inch-Classic-Embroidery-Scissors-P13391609.jpg" alt="" /></button>
         </div>
 
-        <div>
-          <p>Win: {{win}}</p>
-          <p>Lose: {{lose}}</p>
+
+        <div class="row">
+          <div class="col-md-4">
+
+
+            <div>
+              <p>The computer chose: {{computerChoice}}</p>
+            </div>
+            <div>
+              <p>You chose: {{choice}}</p>
+            </div>
+            <div>
+              <p>{{message}}</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+
+            <div>
+              <p>Win: {{win}}</p>
+              <p>Lose: {{lose}}</p>
+              <p>Tie: {{tie}}</p>
+
+            </div>
+          </div>
+          <div class="col-md-4, reset">
+            <button type="button" class="btn btn-primary" ng-click="reset()">Reset</button>
+          </div>
+
         </div>
 
+        </div>
       </div>
     </div>
-    
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
-    
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="js/angular.js"></script>
-  </body>
+  </div>
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="js/angular.js"></script>
+</body>
 </html>
